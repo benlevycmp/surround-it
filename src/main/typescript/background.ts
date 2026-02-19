@@ -21,7 +21,7 @@ function shouldAllowInsertion(pair: BracketPair, prevChar: string, nextChar: str
 	if (!getColumnSettings().insertEnabled) {
 		return false;
 	}
-	return prevChar === '' || isWhitespace(prevChar);
+	return (prevChar === '' || isWhitespace(prevChar)) && (nextChar === '' || isWhitespace(nextChar));
 }
 
 //////////////////////
